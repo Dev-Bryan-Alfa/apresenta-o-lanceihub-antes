@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+# Allow all other pages
+Allow: /
+# Sitemap
+Sitemap: https://lanceihub.com/sitemap.xml

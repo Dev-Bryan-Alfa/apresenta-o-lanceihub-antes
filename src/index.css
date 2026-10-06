@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Para Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="date"] {
+  color: white; /* cor do texto */
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+@layer utilities {
+  /* Borda preta */
+  .text-stroke-black {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+
+  /* Borda branca */
+  .text-stroke-white {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+
+  /* Exemplo com outra cor */
+  .text-stroke-red {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: red;
+  }
+}
+/* Altera o ícone do calendário no Chrome/Edge/Safari */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* inverte a cor → fica branco */
+  cursor: pointer;
+}
+
+/* Scrollbar para Chrome, Edge, Safari */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 12px; /* largura vertical */
+  height: 12px; /* altura horizontal */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #1b2238;
+  border-radius: 9999px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #baa9ff;
+  border-radius: 9999px;
+  border: 3px solid #1b2238; /* cria espaçamento */
+}
+
+.scrollbar-custom::-webkit-scrollbar-button {
+  display: none; /* remove as setinhas */
+}
+
+/* Scrollbar para Firefox */
+.scrollbar-custom {
+  /* scrollbar-width: thin; */
+  scrollbar-color: #000000 #baa9ff;
+}
+
+/* Para Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px; /* largura da barra vertical */
+  height: 12px; /* altura da barra horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #1b2238; /* cor do "trilho" */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #baa9ff; /* cor da "barra" que você arrasta */
+  border-radius: 9999px; /* arredondada */
+  border: 3px solid #1b2238; /* cria espaço entre thumb e track */
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* remove as setinhas */
+}
+
+/* Para Firefox */
+body {
+  scrollbar-width: thin; /* thin, auto ou none */
+  scrollbar-color: #baa9ff #2924a6; /* thumb track */
+}
+
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+}
